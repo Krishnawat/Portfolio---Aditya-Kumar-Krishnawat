@@ -56,7 +56,7 @@ const Contact = () => {
         <span className="contact-subtitle">Get in Touch</span>
         <h2 className="contact-title">Let's Create Something Together</h2>
         <p className="contact-description">
-          Have a project in mind? Let's bring your ideas to life. I'm currently available for freelance projects and collaborations.
+          Got a wild idea at 2AM? Let’s build it before you forget it! I’m currently available for freelance gigs and chaotic creative adventures. Bring snacks, I’ll bring code.
         </p>
       </div>
 
@@ -75,7 +75,7 @@ const Contact = () => {
                 <div className="contact-value"> Aditya Kumar Krishnawat</div>
               </div>
             </div>
-            <p className="response-time">Response time: Within 24 hours</p>
+            <p className="response-time"> Response time: Within 24 hours (or faster if I’m procrastinating something else).</p>
           </a>
 
           <div className="socials-section">
