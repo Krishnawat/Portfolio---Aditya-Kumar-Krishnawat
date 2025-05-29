@@ -1,0 +1,22 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+    overflow: auto;
+  scrollbar-width: none;        /* Firefox */
+  -ms-overflow-style: none;   
+  background-color: #131313;
+  color: #faf9f6;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}

@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Oswald:wght@200..700&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Righteous&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: "Poppins", sans-serif;
+  background-color: #000;
+  color: #fff;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 1rem;
+  text-align: center;
+  animation: fadeIn 1.2s ease-in-out both;
+}
+
+.heading {
+  font-family: "Lexend", sans-serif;
+  font-size: clamp(2.5rem, 8vw, 5.5rem);
+  margin: 0 auto;
+  animation: slideUp 1s ease 0.3s both;
+}
+
+.sub-heading,
+.sub-heading2 {
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+  font-weight: 300;
+  letter-spacing: 2px;
+  margin: 1rem auto;
+  text-align: center;
+  opacity: 0;
+  animation: fadeIn 1s ease 0.6s forwards;
+}
+
+.sub-heading2 {
+  text-transform: uppercase;
+  color: #f0f0f0;
+}
+
+.btn-group {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 1rem;
+  opacity: 0;
+  animation: fadeIn 1s ease 0.9s forwards;
+}
+
+.vw,
+.git {
+  font-size: 0.9rem;
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+  font-weight: 400;
+  cursor: pointer;
+  position: relative;
+  border: none;
+  background: none;
+  text-transform: uppercase;
+  transition: color 400ms cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.vw::after,
+.git::after {
+  content: "";
+  pointer-events: none;
+  bottom: -2px;
+  left: 50%;
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: #fff;
+  transition: width 400ms, left 400ms;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.vw:hover,
+.vw:focus,
+.git:hover,
+.git:focus {
+  color: #fff;
+}
+
+.vw:hover::after,
+.vw:focus::after,
+.git:hover::after,
+.git:focus::after {
+  width: 100%;
+  left: 0%;
+}
+
+.scroll-background {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  opacity: 0.14;
+  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  padding: 2rem 0;
+  background: transparent;
+}
+
+.scroll-line-wrapper {
+  width: 100vw;
+  overflow: hidden;
+}
+
+.scroll-line {
+  display: inline-block;
+  font-size: clamp(4rem, 8vw, 10rem);
+  font-weight: bold;
+  white-space: nowrap;
+  line-height: 1;
+  color: #7e7e7e;
+  transform: skew(-12deg) translateX(0);
+  will-change: transform;
+  animation: scroll-left 40s linear infinite;
+}
+
+.scroll-delay-0 {
+  animation-delay: 0s;
+}
+.scroll-delay-1 {
+  animation-delay: -10s;
+  animation-direction: reverse;
+}
+.scroll-delay-2 {
+  animation-delay: -20s;
+}
+
+/* Keyframes */
+@keyframes scroll-left {
+  0% {
+    transform: skew(-12deg) translateX(0%);
+  }
+  100% {
+    transform: skew(-12deg) translateX(-100%);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .scroll-line {
+    font-size: clamp(3rem, 12vw, 5rem);
+  }
+}
