@@ -93,7 +93,7 @@ const Contact = () => {
 
               </a>
               <a
-                href="https://instagram.com/blehbleh.adi"
+                href="https://instagram.com/kriishnawat"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="social-icon"

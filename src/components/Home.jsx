@@ -40,7 +40,6 @@ function Home() {
 
       {/* 🔵 Foreground Content */}
       <div className="container relative z-10">
-        <canvas id="Home" className="canvas" />
         <div className="sub-heading">
           <p>FRONTEND DEVELOPER</p>
         </div>
